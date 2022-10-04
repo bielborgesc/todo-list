@@ -10,7 +10,7 @@ export class TaskService {
 
   async create(createTaskInput: CreateTaskInput) {
     return await this.prisma.task.create({
-      data: {title: createTaskInput.title}
+      data: {title: createTaskInput.title, status: createTaskInput.status}
     });
   }
 
@@ -25,7 +25,7 @@ export class TaskService {
   update(id: number, updateTaskInput: UpdateTaskInput) {
     return this.prisma.task.update({
       where: {id},
-      data: {title: updateTaskInput.title},
+      data: {title: updateTaskInput.title, status: updateTaskInput.status},
     });
   }
 

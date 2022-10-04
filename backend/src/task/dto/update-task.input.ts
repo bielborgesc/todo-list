@@ -8,4 +8,8 @@ export class UpdateTaskInput extends PartialType(CreateTaskInput) {
 
   @Field()
   title: string;
+
+  @Field()
+  status: boolean;
+
 }

@@ -7,4 +7,8 @@ export class Task {
 
   @Field()
   title: string;
+
+  @Field()
+  status: boolean;
+
 }

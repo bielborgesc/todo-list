@@ -3,6 +3,7 @@
 # ------------------------------------------------------
 
 input CreateTaskInput {
+  status: Boolean!
   title: String!
 }
 
@@ -19,10 +20,12 @@ type Query {
 
 type Task {
   id: Int!
+  status: Boolean!
   title: String!
 }
 
 input UpdateTaskInput {
   id: Int!
+  status: Boolean!
   title: String!
 }
