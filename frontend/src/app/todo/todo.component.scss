@@ -1,0 +1,80 @@
+// reset
+*, *:before, *:after { box-sizing: inherit; }
+body, ul, li  { margin: 0; padding: 0; }
+li { list-style: none; }
+p, h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+a { text-decoration: none; }
+input { border-style: none; background: transparent; outline: none; }
+button { padding: 0; background: none; border: none; outline: none; }
+
+// Border
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+
+.gradient-border {
+  --border-width: 5px;
+  position: relative;
+  padding: 17px 37px;
+  justify-content: center;
+  min-width: 50vw;
+  min-height: 50vh;
+  width: auto;
+  height: auto;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.input{
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  min-width: 300px;
+  input:focus{
+    background-color: none;
+  }
+}
+.card{
+  color: #222;
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-group{
+  button{
+    margin: 0 10px;
+  }
+}

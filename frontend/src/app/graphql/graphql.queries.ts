@@ -29,7 +29,7 @@ const CREATE_TASK = gql`
   }
 `
 
-const UPDATE_TASK = `
+const UPDATE_TASK = gql`
   mutation UpdateTask($input: UpdateTaskInput!){
     updateTask(updateTaskInput: $input){
       id,

@@ -1,4 +1,4 @@
-export interface Task {
+export interface TaskDto {
   title: string;
   status: boolean;
 }
