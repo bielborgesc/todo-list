@@ -1,4 +1,4 @@
-import {gql} from 'apollo-angular'
+import gql from "graphql-tag";
 
 const GET_TASKIES = gql`
   {
